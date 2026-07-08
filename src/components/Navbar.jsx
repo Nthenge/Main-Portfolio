@@ -13,6 +13,8 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
+  const mobileItems = [...NAV_LINKS, "services", "contact"];
+
   return (
     <>
       <nav className="navbar">
@@ -41,30 +43,27 @@ export default function Navbar() {
 
         <button
           className="navbar-menu-btn focusable"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
-          <Menu size={24} />
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
       {menuOpen && (
-        <div className="navbar-mobile">
-          <div className="navbar-mobile-top">
-            <span className="navbar-name">{NAME}</span>
-            <button
-              className="navbar-menu-btn focusable"
-              onClick={() => setMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <X size={26} />
-            </button>
-          </div>
+        <div className="navbar-backdrop" onClick={() => setMenuOpen(false)} />
+      )}
+
+      <div className={`navbar-mobile${menuOpen ? " open" : ""}`}>
+        <div className="navbar-mobile-inner">
           <div className="navbar-mobile-links">
-            {[...NAV_LINKS, "services", "contact"].map((id) => (
+            {mobileItems.map((id) => (
               <button
                 key={id}
-                className="navbar-mobile-link focusable"
+                className={`navbar-mobile-link focusable${
+                  id === "contact" ? " is-cta" : ""
+                }`}
                 onClick={() => goTo(id)}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
@@ -72,7 +71,7 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

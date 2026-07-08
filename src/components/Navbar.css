@@ -74,39 +74,75 @@
   border: none;
   color: var(--ink);
   padding: 6px;
+  position: relative;
+  z-index: 46;
 }
 
+/* Transparent click-catcher: closes the dropdown on outside tap without
+   dimming or covering the page content beneath it. */
+.navbar-backdrop {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 44;
+  background: transparent;
+}
+
+/* Dropdown panel, anchored directly under the navbar. Uses the CSS Grid
+   0fr -> 1fr trick so it animates to its true content height, no matter
+   how many links are in NAV_LINKS, rather than a guessed max-height. */
 .navbar-mobile {
   position: fixed;
-  inset: 0;
-  z-index: 50;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 45;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
   background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  padding: 24px 6vw;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 24px 48px -24px rgba(28, 28, 26, 0.28);
+  transition: grid-template-rows 0.42s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.navbar-mobile-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-mobile.open {
+  grid-template-rows: 1fr;
+}
+
+.navbar-mobile-inner {
+  min-height: 0;
+  padding: 6px 6vw 28px;
 }
 
 .navbar-mobile-links {
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
 }
 
 .navbar-mobile-link {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
   background: none;
   border: none;
+  border-bottom: 1px solid var(--border);
   color: var(--ink);
   text-align: left;
+  padding: 16px 2px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.navbar-mobile-link:hover {
+  color: var(--accent);
+  padding-left: 6px;
+}
+
+.navbar-mobile-link.is-cta {
+  color: var(--accent);
+  border-bottom: none;
 }
 
 @media (max-width: 900px) {
@@ -115,5 +151,14 @@
   }
   .navbar-menu-btn {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-mobile {
+    transition: none;
+  }
+  .navbar-mobile-link {
+    transition: none;
   }
 }
