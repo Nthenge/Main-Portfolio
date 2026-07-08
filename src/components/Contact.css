@@ -308,3 +308,40 @@
     gap: 28px;
   }
 }
+
+@media (max-width: 900px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: auto;
+  }
+  .contact-left {
+    padding: 56px 6vw 32px;
+  }
+  .contact-right {
+    padding: 40px 6vw 56px;
+    clip-path: none;
+  }
+  .contact-form {
+    max-width: 460px;   /* ADD THIS — caps width so side space is visible */
+    margin: 0 auto;      /* ADD THIS — centers it within .contact-right */
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact-footer {
+    grid-template-columns: 1fr;
+  }
+  .footer-note-col {
+    padding: 40px 6vw 0;
+  }
+  .footer-right-col {
+    padding: 32px 6vw 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    max-width: 92%;   /* on very narrow phones, slightly less strict cap */
+  }
+}
