@@ -156,3 +156,12 @@
     transition: none;
   }
 }
+
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-menu-btn {
+    display: block;
+  }
+}
