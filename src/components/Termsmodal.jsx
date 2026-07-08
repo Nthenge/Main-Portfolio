@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
-import "./TermsModal.css";
+import "./Termsmodal.css";
+
 
 export default function TermsModal({ onClose }) {
   const closeButtonRef = useRef(null);
