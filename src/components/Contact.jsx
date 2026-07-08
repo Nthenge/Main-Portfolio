@@ -245,7 +245,7 @@ export default function Contact() {
             </button>
             <div className="form-alt-contact">
               <span>Hate contact forms?</span>
-              <a href="mailto:nthengesj@gmail.com" target="_blank">hello@abrahammutinda.dev</a>
+              <a href="mailto:nthengesj@gmail.com" target="_blank">Send Email Directly</a>
             </div>
           </div>
         </form>

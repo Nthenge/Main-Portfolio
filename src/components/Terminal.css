@@ -49,6 +49,8 @@
 
 .terminal-line-input {
   color: #f2f2f0;
+  overflow-wrap: anywhere;   /* ADD THIS */
+  word-break: break-word;    /* ADD THIS */
 }
 
 .terminal-line-input::before {
