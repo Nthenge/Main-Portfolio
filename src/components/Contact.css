@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1.2fr;
   grid-template-rows: 1fr auto;
   scroll-margin-top: var(--nav-height);
+  background: var(--bg);   /* ADD THIS — ensures the gap shows the same bg as .contact-left */
 }
 
 .contact-left {
@@ -319,12 +320,10 @@
     padding: 56px 6vw 32px;
   }
   .contact-right {
-    padding: 40px 6vw 56px;
+    margin: 0 6vw 40px;         /* ADD THIS — creates space on both sides + below */
+    padding: 40px 24px 48px;    /* CHANGE from: 40px 6vw 56px */
+    border-radius: 16px;       /* ADD THIS — optional, looks better floating */
     clip-path: none;
-  }
-  .contact-form {
-    max-width: 460px;   /* ADD THIS — caps width so side space is visible */
-    margin: 0 auto;      /* ADD THIS — centers it within .contact-right */
   }
   .form-row {
     grid-template-columns: 1fr;
@@ -337,11 +336,5 @@
   }
   .footer-right-col {
     padding: 32px 6vw 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form {
-    max-width: 92%;   /* on very narrow phones, slightly less strict cap */
   }
 }
