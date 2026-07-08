@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { useSectionNav } from "../context/SectionContext";
 import PrivacyModal from "./PrivacyModal";
-import TermsModal from "./TermsModal";
+import TermsModal from "./Termsmodal";
 import "./Contact.css";
 import { API_BASE_URL } from "../config/api";
 
