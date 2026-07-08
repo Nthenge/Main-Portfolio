@@ -9,7 +9,7 @@
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);  /* CHANGE from: 0.95fr 1.05fr */
   gap: 72px;
   align-items: center;
 }

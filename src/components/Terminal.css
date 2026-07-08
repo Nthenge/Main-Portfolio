@@ -5,6 +5,9 @@
   overflow: hidden;
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
   clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 0 100%);
+  width: 100%;               /* ADD THIS */
+  min-width: 0;              /* ADD THIS */
+  box-sizing: border-box;    /* ADD THIS */
 }
 
 .terminal-bar {
@@ -38,6 +41,7 @@
   padding: 24px 24px 0;
   height: clamp(340px, 46vh, 460px);
   overflow-y: auto;
+  overflow-x: hidden;        /* ADD THIS */
   font-family: var(--font-mono);
   font-size: 15px;
   line-height: 1.8;
@@ -55,6 +59,8 @@
 .terminal-line-output {
   color: var(--mint);
   white-space: pre-wrap;
+  overflow-wrap: anywhere;   /* ADD THIS */
+  word-break: break-word;    /* ADD THIS */
   margin-bottom: 6px;
 }
 
