@@ -26,7 +26,7 @@ export default function Hero() {
               ? "STATUS: OPEN TO WORK"
               : "STATUS: CURRENTLY BOOKED"}
           </div>
-          <div className="eyebrow">Backend Dev. Terminal's live — type help to poke around.</div>
+          <div className="eyebrow">Backend Dev. Terminal's live. Type "help" to poke around.</div>
           <h1 className="hero-title">
             I build backend systems that don't flinch.
           </h1>
