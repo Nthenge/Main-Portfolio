@@ -1,0 +1,121 @@
+.terminal {
+  background: var(--dark-panel);
+  border: 1px solid var(--dark-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 0 100%);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 16px 20px;
+  background: #1c1f26;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--dark-border);
+}
+
+.terminal-dot.live {
+  background: var(--accent);
+}
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--dark-muted);
+  margin-left: 8px;
+}
+
+.terminal-body {
+  padding: 24px 24px 0;
+  height: clamp(340px, 46vh, 460px);
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.terminal-line-input {
+  color: #f2f2f0;
+}
+
+.terminal-line-input::before {
+  content: "abraham@backend:~$ ";
+  color: var(--accent);
+}
+
+.terminal-line-output {
+  color: var(--mint);
+  white-space: pre-wrap;
+  margin-bottom: 6px;
+}
+
+.terminal-form {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px 22px;
+}
+
+.terminal-prompt {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 15px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #f2f2f0;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  caret-color: var(--accent);
+}
+
+.terminal-input:focus {
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .terminal {
+    clip-path: none;
+  }
+  .terminal-body {
+    height: clamp(280px, 40vh, 360px);
+  }
+}
+.terminal-compact .terminal-body {
+  height: clamp(280px, 36vh, 380px);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.terminal-compact .terminal-prompt,
+.terminal-compact .terminal-input {
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .terminal-compact .terminal-body {
+    height: clamp(240px, 34vh, 320px);
+  }
+}
+
+.terminal-line-input::before {
+  content: "abraham@backend:~$ ";
+  color: var(--accent);
+}
+
+.terminal-compact .terminal-line-input::before {
+  content: "abraham@about:~$ ";
+}
