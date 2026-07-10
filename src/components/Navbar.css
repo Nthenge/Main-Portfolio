@@ -89,9 +89,6 @@
   z-index: 44;
   background: transparent;
 }
-/* Dropdown panel, anchored to the top-right under the navbar.
-   Width/height auto-fit to content (longest nav label), and it
-   slides in from the right edge via transform. */
 .navbar-mobile {
   position: fixed;
   top: var(--nav-height);
@@ -106,9 +103,11 @@
   to right,
   var(--surface) 0%,
   var(--surface) 25%,
+  var(--surface) 50%,
   var(--bg) 100%
 );
   border: none;
+  border-bottom-left-radius: 20px;
   box-shadow: -24px 24px 48px -24px rgba(28, 28, 26, 0.28);
   transform: translateX(100%);
   transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
@@ -131,7 +130,7 @@
 .navbar-mobile-link {
   font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 300;
   background: none;
   border: none;
   border-bottom: 1px solid var(--border);
