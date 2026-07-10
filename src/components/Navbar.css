@@ -101,10 +101,9 @@
   overflow: hidden;
   background: linear-gradient(
   to right,
-  var(--surface) 0%,
-  var(--surface) 25%,
-  var(--surface) 50%,
-  var(--bg) 100%
+  #ececea 0%,
+  #ececea 25%,
+  #ffffff 100%
 );
   border: none;
   border-bottom-left-radius: 20px;
