@@ -99,7 +99,7 @@
   height: fit-content;
   max-height: calc(100vh - var(--nav-height));
   overflow: hidden;
-  background: #dddddc;
+  background: #e6e6e4;
   border: none;
   border-bottom-left-radius: 20px;
   box-shadow: -24px 24px 48px -24px rgba(28, 28, 26, 0.28);
@@ -125,6 +125,7 @@
   font-family: var(--font-display);
   font-size: 22px;
   background: none;
+  font-weight: 300;
   border: none;
   color: var(--mint);
   text-align: left;
