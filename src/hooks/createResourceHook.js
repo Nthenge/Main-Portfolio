@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_BASE_URL } from "../config/api";
 
-export function createResourceHook(path) {
+export function createResourceHook(path, defaultValue = []) {
   let cache = null;
   let inFlight = null;
   const subscribers = new Set();
@@ -30,7 +30,7 @@ export function createResourceHook(path) {
   }
 
   function useResource() {
-    const [data, setData] = useState(cache || []);
+    const [data, setData] = useState(cache ?? defaultValue);
     const [loading, setLoading] = useState(!cache);
     const [error, setError] = useState(null);
 

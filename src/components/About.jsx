@@ -1,4 +1,6 @@
 import { useSkills } from "../hooks/useSkills";
+import { useYearsOfExperience } from "../hooks/useYearsOfExperience";
+import { useProductionApis } from "../hooks/useProductionApis";
 import { useSectionNav } from "../context/SectionContext";
 import { STATS } from "../data/content";
 import SkillsTerminal from "./SkillsTerminal";
@@ -7,6 +9,18 @@ import "./About.css";
 export default function About() {
   const { registerSection } = useSectionNav();
   const { skills, loading, error } = useSkills();
+  const { yop } = useYearsOfExperience();
+  const { productionApis } = useProductionApis();
+
+  const stats = STATS.map((stat) => {
+    if (stat.label === "Years writing backend code" && yop !== null) {
+      return { ...stat, value: `${yop}+` };
+    }
+    if (stat.label === "APIs shipped to production" && productionApis !== null) {
+      return { ...stat, value: `${productionApis}+` };
+    }
+    return stat;
+  });
 
   return (
     <section id="about" className="section about" ref={registerSection("about")}>
@@ -27,7 +41,7 @@ export default function About() {
           </p>
 
           <div className="about-stats">
-            {STATS.map((stat) => (
+            {stats.map((stat) => (
               <div key={stat.label} className="about-stat">
                 <span className="about-stat-value">{stat.value}</span>
                 <span className="about-stat-label">{stat.label}</span>
