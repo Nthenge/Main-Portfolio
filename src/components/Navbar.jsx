@@ -13,7 +13,7 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
-  const mobileItems = [...NAV_LINKS, "services", "contact"];
+  const mobileItems = [...NAV_LINKS, "contact"];
 
   return (
     <>
