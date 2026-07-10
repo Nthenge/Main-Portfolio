@@ -102,7 +102,7 @@
   height: fit-content;
   max-height: calc(100vh - var(--nav-height));
   overflow: hidden;
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.15); /* adjust color + alpha to taste */
   border: none;
   box-shadow: -24px 24px 48px -24px rgba(28, 28, 26, 0.28);
   transform: translateX(100%);
