@@ -102,9 +102,12 @@
   height: fit-content;
   max-height: calc(100vh - var(--nav-height));
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px); /* Safari support */
+  background: linear-gradient(
+  to right,
+  var(--surface) 0%,
+  var(--surface) 25%,
+  var(--bg) 100%
+);
   border: none;
   box-shadow: -24px 24px 48px -24px rgba(28, 28, 26, 0.28);
   transform: translateX(100%);
@@ -132,7 +135,7 @@
   background: none;
   border: none;
   border-bottom: 1px solid var(--border);
-  color: var(--ink);
+  color: var(--mint);
   text-align: left;
   white-space: nowrap;
   padding: 16px 2px;
