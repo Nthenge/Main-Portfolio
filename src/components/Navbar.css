@@ -130,10 +130,9 @@
 .navbar-mobile-link {
   font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 100;
   background: none;
   border: none;
-  border-bottom: 1px solid var(--border);
   color: var(--mint);
   text-align: left;
   white-space: nowrap;
