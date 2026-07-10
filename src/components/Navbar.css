@@ -99,12 +99,7 @@
   height: fit-content;
   max-height: calc(100vh - var(--nav-height));
   overflow: hidden;
-  background: linear-gradient(
-  to right,
-  #ececea 0%,
-  #ececea 25%,
-  #ffffff 100%
-);
+  background: red;
   border: none;
   border-bottom-left-radius: 20px;
   box-shadow: -24px 24px 48px -24px rgba(28, 28, 26, 0.28);
@@ -129,7 +124,6 @@
 .navbar-mobile-link {
   font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 100;
   background: none;
   border: none;
   color: var(--mint);
