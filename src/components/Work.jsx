@@ -41,7 +41,12 @@ export default function Work() {
               </div>
 
                 <div className={`work-preview work-preview-${(i % 4) + 1}`}>
-                  <span className="work-status">200 OK</span>
+                  <span
+                    className="work-status"
+                    style={{ color: p.status === false ? '#ff5f57' : '#28c840' }}
+                  >
+                    {p.status === false ? '503 Offline' : '200 OK'}
+                  </span>
                   {p.highlight && (
                     <span className="work-highlight">{p.highlight}</span>
                   )}
