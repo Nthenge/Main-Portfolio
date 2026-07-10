@@ -13,16 +13,13 @@ export function SectionProvider({ children }) {
   );
 
   const scrollToSection = useCallback((id) => {
-    const el = sectionRefs.current[id];
-    if (!el) return;
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    el.scrollIntoView({
-      behavior: reduceMotion ? "auto" : "smooth",
-      block: "start",
-    });
-  }, []);
+  const el = sectionRefs.current[id];
+  if (!el) return;
+  el.scrollIntoView({
+    behavior: "auto",
+    block: "start",
+  });
+}, []);
 
   return (
     <SectionContext.Provider value={{ registerSection, scrollToSection }}>
