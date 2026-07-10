@@ -20,6 +20,18 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html {
+  -ms-overflow-style: none;
+}
+
 * {
   box-sizing: border-box;
 }
