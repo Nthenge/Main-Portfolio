@@ -34,11 +34,11 @@ export default function Work() {
             return (
               <div key={p.id} className="work-card">
                 <div className="work-chrome">
-                  <span className="work-dot" />
-                  <span className="work-dot" />
-                  <span className="work-dot" />
-                  <span className="work-url">{p.domain}</span>
-                </div>
+                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                <span className="work-url">{p.domain}</span>
+              </div>
 
                 <div className={`work-preview work-preview-${(i % 4) + 1}`}>
                   <span className="work-status">200 OK</span>
