@@ -3,7 +3,7 @@ export const ROLE = "Backend Developer";
 
 export const SECTIONS = ["home", "work", "services", "about", "contact"];
 
-export const NAV_LINKS = ["home", "work", "about"];
+export const NAV_LINKS = ["home", "work", "about", "Seervices"];
 
 export const HELP_TEXT =
   "Available commands: home, work, services, about, contact, whoami, ls, clear, cls, status";
