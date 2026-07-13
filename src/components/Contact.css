@@ -168,6 +168,12 @@
 
 .form-footer {
   display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-footer-row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -187,6 +193,26 @@
 .form-alt-contact a {
   color: #f2f2f0;
   font-weight: 500;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 100px;
+  background: rgba(37, 211, 102, 0.14);
+  color: #25D366;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background: rgba(37, 211, 102, 0.22);
 }
 
 .spin {
