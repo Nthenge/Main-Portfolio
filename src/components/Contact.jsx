@@ -169,9 +169,9 @@ export default function Contact() {
               <select id="budget" name="budget" defaultValue="" disabled={isLoading}>
                 <option value="" disabled>Select a range</option>
                 <option>Under 10,000 KSH</option>
-                <option>10,000 - 25,000</option>
-                <option>25,000 - 40,000</option>
-                <option>40,000+</option>
+                <option>10,000 - 50,000 KSH</option>
+                <option>50,000 - 200,000 KSH</option>
+                <option>200,000+ KSH</option>
               </select>
             </div>
             <div className="form-field">
