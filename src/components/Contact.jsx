@@ -246,6 +246,13 @@ export default function Contact() {
             <div className="form-alt-contact">
               <span>Hate contact forms?</span>
               <a href="mailto:nthengesj@gmail.com" target="_blank">Send Email Directly</a>
+              <a
+              href="https://wa.me/254768830097?text=Hi%20Abraham%2C%20I%27d%20like%20to%20discuss%20a%20project"
+              target="_blank"
+              rel="noreferrer"
+              >
+              Chat on WhatsApp
+            </a>
             </div>
           </div>
         </form>
