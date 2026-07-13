@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useProjects } from "../hooks/useProjects";
 import { useSectionNav } from "../context/SectionContext";
 import "./Work.css";
@@ -34,11 +34,11 @@ export default function Work() {
             return (
               <div key={p.id} className="work-card">
                 <div className="work-chrome">
-                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
-                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
-                <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
-                <span className="work-url">{p.domain}</span>
-              </div>
+                  <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                  <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                  <span className="work-dot" style={{ background: p.status === false ? '#ff5f57' : '#28c840' }} />
+                  <span className="work-url">{p.domain}</span>
+                </div>
 
                 <div className={`work-preview work-preview-${(i % 4) + 1}`}>
                   <span
@@ -73,8 +73,13 @@ export default function Work() {
                       </a>
                     ) : (
                       <span className="work-footer-muted">
-                        Case study coming soon
+                        Coming soon
                       </span>
+                    )}
+                    {p.siteUrl && (
+                      <a href={p.siteUrl} target="_blank" rel="noreferrer">
+                        View site <ExternalLink size={14} />
+                      </a>
                     )}
                   </div>
                 </div>
