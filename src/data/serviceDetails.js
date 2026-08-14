@@ -41,7 +41,7 @@ export const SERVICE_DETAILS = {
 
   "API Development": {
     summary:
-      "REST and GraphQL services built with Spring Boot — designed to be predictable, versioned, and hard to misuse by the next developer who touches them, including future me.",
+      "REST and GraphQL services built with Spring Boot — designed to be predictable, versioned, and hard to misuse by the next engineer who touches them, including future me.",
     sections: [
       {
         heading: "Design approach",

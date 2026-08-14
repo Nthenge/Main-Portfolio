@@ -283,7 +283,7 @@ export default function Contact() {
         <div className="footer-right-col">
           <div className="footer-current">
             <p className="footer-current-text">
-              Nairobi-based backend developer, mostly living inside Java Spring Boot microservices — payments, auth, and the occasional M-Pesa integration that fights back. Most nights I'm still wondering if that transaction really rolled back correctly.
+              Nairobi-based backend engineer, mostly living inside Java Spring Boot microservices — payments, auth, and the occasional M-Pesa integration that fights back. Most nights I'm still wondering if that transaction really rolled back correctly.
             </p>
           </div>
 

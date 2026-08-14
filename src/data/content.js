@@ -1,5 +1,5 @@
 export const NAME = "Abraham Mutinda";
-export const ROLE = "Backend Developer";
+export const ROLE = "Backend Engineer";
 
 export const SECTIONS = ["home", "work", "services", "about", "contact"];
 
