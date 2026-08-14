@@ -168,6 +168,8 @@ export default function Contact() {
               <label htmlFor="budget">Budget Range</label>
               <select id="budget" name="budget" defaultValue="" disabled={isLoading}>
                 <option value="" disabled>Select a range</option>
+                <option>Job Position</option>
+                <option>Contract Position</option>
                 <option>Under 10,000 KSH</option>
                 <option>10,000 - 50,000 KSH</option>
                 <option>50,000 - 200,000 KSH</option>
