@@ -165,15 +165,15 @@ export default function Contact() {
 
           <div className="form-row">
             <div className="form-field">
-              <label htmlFor="budget">Select Plan</label>
+              <label htmlFor="budget">Plans</label>
               <select id="budget" name="budget" defaultValue="" disabled={isLoading}>
-                <option value="" disabled>Select a range</option>
+                <option value="" disabled>Select a Plan</option>
                 <option>Job Position</option>
                 <option>Contract Position</option>
-                <option>Under 10,000 KSH</option>
-                <option>10,000 - 50,000 KSH</option>
-                <option>50,000 - 200,000 KSH</option>
-                <option>200,000+ KSH</option>
+                <option>Small Task / Quick Fix</option>
+                <option>Standard Project</option>
+                <option>Large Project</option>
+                <option>Enterprise / Ongoing Engagement</option>
               </select>
             </div>
             <div className="form-field">
