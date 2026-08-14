@@ -27,7 +27,7 @@ export default function About() {
       <div className="about-grid">
         <div className="about-text">
           <span className="eyebrow">About</span>
-          <h2 className="section-title">Backend Dev.</h2>
+          <h2 className="section-title">Backend Engineer.</h2>
           <p>
             I build backend systems that don't buckle under pressure. APIs,
             microservices, and databases engineered with Java and Spring Boot
