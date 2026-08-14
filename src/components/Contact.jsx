@@ -165,7 +165,7 @@ export default function Contact() {
 
           <div className="form-row">
             <div className="form-field">
-              <label htmlFor="budget">Budget Range</label>
+              <label htmlFor="budget">Select Plan</label>
               <select id="budget" name="budget" defaultValue="" disabled={isLoading}>
                 <option value="" disabled>Select a range</option>
                 <option>Job Position</option>
