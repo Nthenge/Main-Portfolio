@@ -57,7 +57,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   flex: 0 0 auto;
-  width: min(560px, 85vw);
+  width: min(660px, 85vw);
   scroll-snap-align: start;
 }
 
@@ -146,9 +146,9 @@
   margin: 0;
 
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  line-clamp: 3;
+  line-clamp: 4;
   overflow: hidden;
 }
 
