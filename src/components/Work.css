@@ -57,7 +57,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   flex: 0 0 auto;
-  width: min(660px, 85vw);
+  width: min(660px, 105vw);
   scroll-snap-align: start;
 }
 
